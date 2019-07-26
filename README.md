@@ -28,6 +28,16 @@ client.batch([
 .then(function (result) {
   console.log(result)
 })
+
+client.batch()
+  .getInfo()
+  .clear()
+  .getNewAddress('myaccount')
+  .getNewAddress('secondaccount')
+  .call()
+  .then(function (result) {
+    console.log(result)
+  })
 ```
 
 ```sh
